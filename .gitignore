@@ -1,0 +1,6 @@
+logan*
+.DS_Store
+.vscode
+__pycache__
+pypbd.egg-info
+
