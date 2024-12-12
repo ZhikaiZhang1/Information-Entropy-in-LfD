@@ -10,4 +10,3 @@
 ## Instructions
 
 * `path.py` is the main script to use for normal testings, `path_transfer.py` is used for transfer tests, `check_path.py` is primarily used for testing out features and debugging. 
-* Refer to this [document](https://docs.google.com/document/d/1Hoe-KGAe_jLRom8S-55e_vHk4I268x6u/edit?usp=sharing&ouid=104224042634883891082&rtpof=true&sd=true) for further instructions, including those regarding setting up the Linux workspace side of the project
