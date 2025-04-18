@@ -17,21 +17,31 @@
 
 ## Instructions
 
-* `path.py` is the main script to use for normal testings.
-* `path_transfer.py` is used for transfer tests.
-* `check_path.py` is primarily used for testing out features and debugging.
+* `path.py` is the main script to use for baseline and retention testing.
+* `path_transfer.py` is used for the transfer test.
+* `check_path.py` is primarily used to test features and debug.
 
 * Information entropy is calculated in `normalize()` in `path.py`. Parameters are normalized and weighted, which is then used to calculate the entropy of a given point. The max ent region is then selected for the next demonstration.
 * Editable hyperparameters are found in the `Params` dataclass. Default values are consistent with those used in the reported experiments. `vis_mode` is used to toggle between the entropy method and the 4cm rule baseline.
 * The overall active learning loop is as follows:
   1. Start with initial demonstrations
   2. Fit the TP-GMM model
-  3. Generate grid of potential trajectories
+  3. Generate a grid of potential trajectories
   4. Calculate information entropy for each region
   5. Select the point with maximum entropy
-  6. Add/requeset a new demonstration at this point
-  7. Repeat steps 2-6 until full state space coverage achieved
+  6. Add/request a new demonstration at this point
+  7. Repeat steps 2-6 until at least 90% of the state space coverage is achieved
  
 ## Citation
 Thank you for using and referencing our code. If using our library in your own research, please cite:
-[CITATION NEEDED]
+
+Maram Sakr, Zhikai Zhang, Benjamin Li, Haomiao Zhang, H.F. Machiel Van der Loos, Dana Kulic, and Elizabeth Croft. _"How Can Everyday Users Teach Robots Efficiently from Demonstration?"_ ACM Transactions on Human-Robot Interaction (THRI), 2025.
+
+BibTeX:
+```bibtex
+@article{sakr2025teachrobots,
+  title={How Can Everyday Users Teach Robots Efficiently from Demonstration?},
+  author={Sakr, Maram and Zhang, Zhikai and Li, Benjamin and Zhang, Haomiao and Van der Loos, H.F. Machiel and Kulic, Dana and Croft, Elizabeth},
+  journal={ACM Transactions on Human-Robot Interaction (THRI)},
+  year={2025}
+}
